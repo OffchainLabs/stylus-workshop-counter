@@ -5,4 +5,4 @@ set -o allexport
 source scripts/.env
 set +o allexport
 
-cargo stylus deploy --private-key $PRIVATE_KEY
+cargo stylus deploy -e $RPC_URL --private-key $PRIVATE_KEY
