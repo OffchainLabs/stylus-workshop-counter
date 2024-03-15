@@ -16,6 +16,8 @@ The `scripts` folder contains several scripts that make individual calls to perf
 2. [./scripts/getCount.sh](./scripts/getCount.sh) to get the current counter
 3. [./scripts/increment.sh](./scripts/increment.sh) to increment the current counter
 
+Remember to set the environment variables in an `.env` file.
+
 ## How to run a local Stylus dev node
 
 Instructions to setup a local Stylus dev node can be found [here](https://docs.arbitrum.io/stylus/how-tos/local-stylus-dev-node).
