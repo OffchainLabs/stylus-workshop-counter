@@ -14,7 +14,7 @@ then
 fi
 
 # Call
-current_counter=$(cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "get() (uint256)")
+current_counter=$(cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "number() (uint256)")
 echo "Counter: $current_counter"
 
 # CONTRACT_ADDRESS= ./scripts/getCount.sh

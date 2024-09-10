@@ -17,7 +17,7 @@ fi
 echo "Incrementing the counter..."
 cast send --rpc-url $RPC_URL --private-key $PRIVATE_KEY $CONTRACT_ADDRESS "increment()"
 
-new_counter=$(cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "get() (uint256)")
+new_counter=$(cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "number() (uint256)")
 echo "New counter: $new_counter"
 
 # CONTRACT_ADDRESS= ./scripts/increment.sh

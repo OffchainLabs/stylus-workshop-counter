@@ -17,7 +17,7 @@ fi
 echo "Setting the new counter..."
 cast send --rpc-url $RPC_URL --private-key $PRIVATE_KEY $CONTRACT_ADDRESS "setCount(uint256)" $NEW_COUNT
 
-new_counter=$(cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "get() (uint256)")
+new_counter=$(cast call --rpc-url $RPC_URL $CONTRACT_ADDRESS "number() (uint256)")
 echo "New counter: $new_counter"
 
 # CONTRACT_ADDRESS= NEW_COUNT=20 ./scripts/setCount.sh
