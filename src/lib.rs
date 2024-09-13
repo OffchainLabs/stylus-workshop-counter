@@ -3,11 +3,7 @@
 extern crate alloc;
 
 /// Import items from the SDK. The prelude contains common traits and macros.
-use stylus_sdk::{
-  alloy_primitives::U256,
-  prelude::*,
-  storage::StorageU256,
-};
+use stylus_sdk::{alloy_primitives::U256, prelude::*, storage::StorageU256};
 
 // Define some persistent storage using the Solidity ABI.
 // `Counter` will be the entrypoint.
@@ -16,7 +12,6 @@ use stylus_sdk::{
 pub struct Counter {
     number: StorageU256,
 }
-
 
 /// Declare that `Counter` is a contract with the following external methods.
 #[public]
@@ -50,8 +45,7 @@ impl Counter {
 
 #[cfg(all(test))]
 mod tests {
-    use alloy_primitives::{address, uint, Address, U256};
-    use stylus_sdk::msg;
+    use alloy_primitives::U256;
 
     use super::Counter;
 
