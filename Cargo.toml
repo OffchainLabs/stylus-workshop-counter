@@ -8,7 +8,7 @@ stylus-sdk = { version = "0.6.0", default-features = false }
 
 [dev-dependencies]
 alloy-primitives = { version = "0.7.6", default-features = false }
-motsu = { git = "https://github.com/OpenZeppelin/rust-contracts-stylus", branch = "v0.1.0", default-features = false }
+motsu = { git = "https://github.com/openZeppelin/rust-contracts-stylus/", branch = "build/motsu-version" }
 
 [features]
 export-abi = ["stylus-sdk/export-abi"]
@@ -21,6 +21,6 @@ codegen-units = 1
 strip = true
 lto = true
 panic = "abort"
-opt-level = "s"
+opt-level = "z"
 
 [workspace]
