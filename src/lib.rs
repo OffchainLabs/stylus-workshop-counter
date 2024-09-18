@@ -1,5 +1,4 @@
 // Allow `cargo stylus export-abi` to generate a main function.
-#![cfg_attr(not(feature = "export-abi"), no_main)]
 extern crate alloc;
 
 /// Import items from the SDK. The prelude contains common traits and macros.
@@ -48,16 +47,44 @@ impl Counter {
     }
 }
 
-#[cfg(all(test))]
+#[cfg(test)]
 mod tests {
-    use alloy_primitives::{address, uint, Address, U256};
-    use stylus_sdk::msg;
-
-    use super::Counter;
+    use super::*;
 
     #[motsu::test]
-    fn it_works(contract: Counter) {
+    fn it_gets_number(contract: Counter) {
         let number = contract.number();
         assert_eq!(U256::ZERO, number);
+    }
+
+    #[motsu::test]
+    fn it_sets_number(contract: Counter) {
+        contract.set_number(U256::from(5));
+        let number = contract.number();
+        assert_eq!(U256::from(5), number);
+    }
+
+    #[motsu::test]
+    fn it_multiplies(contract: Counter) {
+        contract.set_number(U256::from(5));
+        contract.mul_number(U256::from(2));
+        let number = contract.number();
+        assert_eq!(U256::from(10), number);
+    }
+
+    #[motsu::test]
+    fn it_adds(contract: Counter) {
+        contract.set_number(U256::from(5));
+        contract.add_number(U256::from(2));
+        let number = contract.number();
+        assert_eq!(U256::from(7), number);
+    }
+
+    #[motsu::test]
+    fn it_increments(contract: Counter) {
+        contract.set_number(U256::from(5));
+        contract.increment();
+        let number = contract.number();
+        assert_eq!(U256::from(6), number);
     }
 }

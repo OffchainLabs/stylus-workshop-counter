@@ -4,10 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-stylus-sdk = "0.6.0"
+stylus-sdk = { version = "0.6.0", default-features = false }
 
 [dev-dependencies]
-openzeppelin-stylus = { git = "https://github.com/OpenZeppelin/rust-contracts-stylus", branch = "v0.1.0" }
+motsu = "0.1.0-rc"
 
 [features]
 export-abi = ["stylus-sdk/export-abi"]
