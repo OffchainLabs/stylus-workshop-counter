@@ -4,11 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-stylus-sdk = "0.6.0"
+stylus-sdk = { version = "0.6.0", default-features = false }
 
 [dev-dependencies]
-motsu = { path = "../motsu-local/motsu" }
-motsu-proc = { path = "../motsu-local/motsu-proc" }
+motsu = "0.1.0-rc"
 
 [features]
 export-abi = ["stylus-sdk/export-abi"]
