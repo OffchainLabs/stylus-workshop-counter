@@ -314,8 +314,9 @@ checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
 
 [[package]]
 name = "motsu"
-version = "0.1.0"
-source = "git+https://github.com/openZeppelin/rust-contracts-stylus/?branch=v0.1.0#42c859f37d7332fbd78a216a283064a5227f9c68"
+version = "0.1.0-rc"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6cff6390ad19dea5f6bf7011af9560c3dc5f9162fa4b1b33c0d24df18a2c7fcb"
 dependencies = [
  "const-hex",
  "motsu-proc",
@@ -327,7 +328,8 @@ dependencies = [
 [[package]]
 name = "motsu-proc"
 version = "0.1.0"
-source = "git+https://github.com/openZeppelin/rust-contracts-stylus/?branch=v0.1.0#42c859f37d7332fbd78a216a283064a5227f9c68"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0785317ee15f9a1bc5d761da9d0d1dadd92225cd5a88eed0ec37c54a277fac44"
 dependencies = [
  "proc-macro2",
  "quote",
