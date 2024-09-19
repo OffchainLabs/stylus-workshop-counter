@@ -8,6 +8,7 @@ stylus-sdk = { version = "0.6.0", default-features = false }
 
 [dev-dependencies]
 motsu = "0.1.0-rc"
+e2e = { path = "../e2e-lib/e2e" }
 
 [features]
 export-abi = ["stylus-sdk/export-abi"]
