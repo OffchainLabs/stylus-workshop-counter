@@ -1317,6 +1317,7 @@ checksum = "92773504d58c093f6de2459af4af33faa518c13451eb8f2b5698ed3d36e7c813"
 [[package]]
 name = "e2e"
 version = "0.1.0"
+source = "git+https://github.com/TucksonDev/e2e-lib.git#d69a77c6c786bbc445b02dd0960d516f352ef1bb"
 dependencies = [
  "alloy",
  "const-hex",
@@ -1333,6 +1334,7 @@ dependencies = [
 [[package]]
 name = "e2e-proc"
 version = "0.1.0"
+source = "git+https://github.com/TucksonDev/e2e-lib.git#d69a77c6c786bbc445b02dd0960d516f352ef1bb"
 dependencies = [
  "proc-macro2",
  "quote",
