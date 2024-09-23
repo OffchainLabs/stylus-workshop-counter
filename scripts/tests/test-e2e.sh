@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Build wasm32-unknown-unknown binary
-cargo build --release --target wasm32-unknown-unknown
+# cargo build --locked --release --target wasm32-unknown-unknown
+cargo stylus check
 
 # Run tests
 export RPC_URL=http://localhost:8547
-cargo test --locked --test "integration_tests"
+cargo test --locked --test "integration_tests" --features export-abi
