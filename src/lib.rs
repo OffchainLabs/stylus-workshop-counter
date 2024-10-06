@@ -8,7 +8,7 @@ use stylus_sdk::{
   storage::StorageU256,
 };
 
-/// The solidity_storage macro allows this struct to be used in persistent
+/// The storage macro allows this struct to be used in persistent
 /// storage. It accepts fields that implement the StorageType trait. Built-in
 /// storage types for Solidity ABI primitives are found under
 /// stylus_sdk::storage.
