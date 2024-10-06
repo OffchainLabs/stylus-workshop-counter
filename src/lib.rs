@@ -8,14 +8,18 @@ use stylus_sdk::{
   storage::StorageU256,
 };
 
-// Define some persistent storage using the Solidity ABI.
-// `Counter` will be the entrypoint.
+/// The solidity_storage macro allows this struct to be used in persistent
+/// storage. It accepts fields that implement the StorageType trait. Built-in
+/// storage types for Solidity ABI primitives are found under
+/// stylus_sdk::storage.
 #[storage]
+/// The entrypoint macro defines where Stylus execution begins. External methods
+/// are exposed by annotating an impl for this struct with #[external] as seen
+/// below.
 #[entrypoint]
 pub struct Counter {
     number: StorageU256,
 }
-
 
 /// Declare that `Counter` is a contract with the following external methods.
 #[public]
@@ -47,6 +51,7 @@ impl Counter {
     }
 }
 
+/// Unit tests
 #[cfg(test)]
 mod tests {
     use super::*;
